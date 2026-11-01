@@ -1,0 +1,270 @@
+/* gäller alla html element.padding border räknas in i angiven bredd och höjd */
+* {
+  box-sizing: border-box;
+}
+.mobil-menu {
+  display: none;
+}
+h1 {
+  color: #634334;
+  text-align: center;
+}
+.blogg-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+html,body {
+  margin: 0;
+  background-color: antiquewhite;
+  width: 100%;
+  overflow-x: hidden;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: bisque;
+  border: 1px solid black;
+}
+
+.card h2 {
+  color: brown;
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+}
+.card p {
+ padding: 10px;
+ text-align: center; 
+}
+
+.card button {
+  align-self: center; /*centrerar knappen vägrätt i kortet */
+  margin-top: auto; /*trycker ner knappen längst ner lika i alla boxar eftersom det är olika mängs text*/
+  margin-bottom: 20px;
+  background-color: #634334;
+  border: none;
+  cursor: pointer;
+  border: 1px solid black;
+}
+/* andra knapp sida 2 */
+.second-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.second-button a {
+  background-color: #634334;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+/* andra sida kort */
+#post-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+/* kryss img */
+.delete-blogg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 5px;
+}
+
+/* andra sida innehåll */
+.post-card {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* andra sida kommentar */
+#comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  font-size: 30px;
+  padding: 20px;
+  color: #634334;
+}
+
+.comment-card {
+  background-color: bisque;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border: 1px solid black;
+  flex-direction: column;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+#newComment {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  max-width: 90%;
+}
+#addComment {
+  display: block;
+  margin: 10px auto;
+}
+
+footer {
+  background-color: #4a3026;
+}
+.footer p {
+  color: beige;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 20px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+.social-media img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.arrow img {
+  width: 40px;
+  height: 40px;
+}
+.arrow {
+  display: grid;
+  justify-content: center;
+  padding-right: 50px;
+}
+.nav-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* facebook/instagram hamnar i linje med bild */
+.social-media a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.social-media span {
+  color: beige;
+  padding: 15px;
+  
+}
+
+.nav-bottom a {
+  color: beige;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.social h3 {
+  text-decoration: underline;
+  color: beige;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    padding: 15px;
+  }
+  .blogg-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  .nav {
+    display: none; /*ta bort nav och ersätt med den under*/
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav a {
+    color: black;
+    text-decoration: solid;
+  }
+
+  /* hamburgerbilden placering */
+  .mobil-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobil-menu img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  /* visar mobilmeny */
+  .nav.open {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    right: 60px;
+  }
+}
